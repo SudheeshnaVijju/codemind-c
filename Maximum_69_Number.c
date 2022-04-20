@@ -1,18 +1,29 @@
 #include<stdio.h>
-#include<string.h>
 int main()
 {
-    int i;
-    char a[100];
-    scanf("%s",a);
-    for(i=0;i<strlen(a);i++)
+    int n,d,a[100],i,j;
+    scanf("%d",&n);
+    i=0;
+    while(n!=0)
     {
-        if(a[i]=='6')
+        d=n%10;
+        n=n/10;
+        a[i]=d;
+        i++;
+    }
+    for(j=i-1;j>=0;j--)
+    {
+        //for(int k=0;k<i;k++)
         {
-            a[i]='9';
-            break;
+            if(a[j]==6)
+            {
+                a[j]=9;
+                break;
+            }
         }
     }
-    printf("%s",a);
-    
+    for(j=i-1;j>=0;j--)
+    {
+        printf("%d",a[j]);
+    }
 }
