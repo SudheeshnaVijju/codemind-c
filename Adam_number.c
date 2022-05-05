@@ -1,0 +1,30 @@
+#include<stdio.h>
+int main()
+{
+    int n,t,i,d,a,s=0,c=0,j,k;
+    scanf("%d",&n);
+    t=n;
+    i=n*n;
+    while(n!=0)
+    {
+        d=n%10;
+        n=n/10;
+        s=s*10+d;
+    }
+    a=s*s;
+    k=a;
+    while(k!=0)
+    {
+        j=k%10;
+        k=k/10;
+        c=c*10+j;
+    }
+    if(c==i)
+    {
+        printf("True");
+    }
+    else
+    {
+        printf("False");
+    }
+}
